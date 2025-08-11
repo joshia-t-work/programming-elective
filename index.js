@@ -1,0 +1,3 @@
+const petition = () => {
+    window.location = "mailto:joshia.tanumihardja@cahayabangsa.org?subject=Toilet%20Pass%20Petition&body=Greetings%2C%20Gatekeeper%20of%20the%20Fabled%20Oasis%2C%0A%0AI%2C%20a%20humble%20traveler%2C%20stand%20before%20you%20to%20seek%20passage%20to%20the%20legendary%20Chamber%20of%20Relief.%20My%20canteen%20runneth%20over%20from%20the%20morning's%20coffee%2C%20and%20the%20journey%20has%20been%20long.%0A%0AMy%20resolve%20is%20strong%2C%20but%20my...%20water-skin%20is%20at%20capacity.%0A%0APray%2C%20grant%20me%20the%20boon%20of%20entry%2C%20that%20I%20may%20complete%20my%20noble%20quest%20and%20return%20to%20my%20duties%2C%20refreshed%20and%20victorious.%0A%0AYours%20in%20heroic%20anticipation%2C%0A%0ARandom%20Website%20Button%20Clicker";
+}
