@@ -1,3 +1,10 @@
+.students-image {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 /* Base Reset / Normalize (lightweight) */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
