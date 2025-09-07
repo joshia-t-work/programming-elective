@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G10 Questboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen font-sans">
+
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 flex flex-col h-[90vh]">
+        <div class="p-4 border-b border-gray-200 text-center">
+            <h1 class="text-2xl font-bold text-gray-800">Quest Board</h1>
+            <p id="status" class="text-sm text-gray-500 mt-1">Initializing...</p>
+        </div>
+
+        <div class="p-4 bg-gray-50">
+            <div id="room-creation">
+                 <div class="flex items-center space-x-2">
+                    <p class="font-semibold text-gray-700">Your ID / Room ID:</p>
+                    <input type="text" id="my-id" class="flex-grow bg-gray-200 text-gray-600 font-mono text-sm rounded-md px-2 py-1 cursor-not-allowed" readonly placeholder="Waiting for ID...">
+                    <button id="create-room-btn" onclick="createRoom()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded-md transition-colors duration-200">Create Room</button>
+                </div>
+                <div class="mt-3 flex items-center space-x-2">
+                    <input type="text" id="room-id-input" class="flex-grow border border-gray-300 rounded-md px-2 py-1 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter Room ID to join">
+                    <button id="join-btn" onclick="joinRoom()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-md transition-colors duration-200">Join</button>
+                </div>
+            </div>
+            <p id="room-info" class="text-center font-semibold text-blue-700 hidden"></p>
+        </div>
+
+        <!-- Quest Board -->
+        <div class="flex-grow p-4 overflow-y-auto">
+            <h2 class="text-lg font-semibold mb-3 text-gray-700">Available Quests</h2>
+            <div id="quest-board" class="space-y-3">
+                <!-- Quests will be rendered here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
