@@ -318,7 +318,7 @@ function initializePeer() {
     });
 
     // Hide any 'Create Room' controls (buttons with onclick="createRoom()") so students don't accidentally create rooms.
-    // Teachers can reveal them with Ctrl+Shift+T.
+    // Teachers can reveal them with Ctrl+Alt+K.
     peer.on('open', () => {
         try {
             const els = Array.from(document.querySelectorAll('[onclick]'));
@@ -334,15 +334,16 @@ function initializePeer() {
         }
     });
 
-    // Reveal/hide teacher-only controls with Ctrl+Shift+T
+    // Reveal/hide teacher-only controls with Ctrl+Alt+K
     document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && e.shiftKey && e.key && e.key.toLowerCase() === 't') {
+        // Use Ctrl+Alt+K to avoid conflicting with common browser shortcuts like Ctrl+Shift+T
+        if (e.ctrlKey && e.altKey && e.key && e.key.toLowerCase() === 'k') {
             const hidden = document.querySelectorAll('[data-hidden-by-teacher]');
             hidden.forEach(el => {
                 if (el.style.display === 'none') el.style.display = '';
                 else el.style.display = 'none';
             });
-            alert('Toggled teacher controls.');
+            alert('Toggled teacher controls (Ctrl+Alt+K).');
         }
     });
 
