@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quest Teams</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 24px; color: #222; }
+        h1 { margin-bottom: 12px; }
+        .teams { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+        .team { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
+        .team h2 { margin: 0 0 8px 0; font-size: 1.1rem; }
+        .team .team-name { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
+        .members { list-style: none; padding: 0; margin: 0; }
+        .member { padding: 6px 0; border-top: 1px dashed #eee; display: flex; justify-content: space-between; gap: 8px; }
+        .member:first-child { border-top: none; }
+        .fullname { font-weight: 600; }
+        .meta { color: #666; font-size: 0.9rem; white-space: nowrap; }
+        footer { margin-top: 18px; color: #666; font-size: 0.9rem; }
+        /* Details UI */
+        .details-btn { background:#e2e8f0; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; font-size:0.9rem; }
+        .details-btn:hover { background:#cbd5e1; }
+        .quest-details { margin-top:10px; padding:10px; background:#fff; border:1px solid #eee; border-radius:6px; font-size:0.95rem; color:#333; }
+        .hidden { display:none; }
+    </style>
+</head>
+<body>
+    <h1>Quest: Teams</h1>
+
+    <div class="teams">
+        <section class="team">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+                <h2>GameHub</h2>
+                <button class="details-btn" onclick="toggleDetails('gamehub')">Details</button>
+            </div>
+            <div class="team-name">Team name: 67 mangoes</div>
+            <div class="picked-quest">Picked quest: GameHub — Community Landing (Pre-Launch)</div>
+            <div id="details-gamehub" class="quest-details hidden">
+                <p><strong>Background:</strong> We're soft-launching a community for indie gamers and streamers and need a single landing that feels energetic and playful.</p>
+                <p><strong>Goal:</strong> Capture interest, get visitors to join our waitlist, and invite them to “try a surprise” on the page.</p>
+                <p><strong>Scope:</strong> One scrolling homepage with a main header area, About, and a short action section.</p>
+                <p><strong>Must-have interactions:</strong></p>
+                <ul>
+                    <li>Hover main headline briefly switches to a playful variant.</li>
+                    <li>Join the Waitlist button shows an on-page click counter.</li>
+                    <li>Change Vibe button cycles or shuffles the page color theme.</li>
+                </ul>
+                <p><strong>Assets:</strong> Logo (PNG), color swatch, 2-sentence blurb, 3 game screenshots.</p>
+                <p><strong>Constraints:</strong> Single page; mobile-friendly; no login or backend.</p>
+            </div>
+            <ul class="members">
+                <li class="member"><span class="fullname">Erasmus Anendra Ginting</span></li>
+                <li class="member"><span class="fullname">Philbert Leonard</span></li>
+                <li class="member"><span class="fullname">Nathaniel Austin</span></li>
+                <li class="member"><span class="fullname">Jonathan Cale Wijaya</span></li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+                <h2>Slice Society</h2>
+                <button class="details-btn" onclick="toggleDetails('slice')">Details</button>
+            </div>
+            <div class="team-name">Team name: Unknown</div>
+            <div class="picked-quest">Picked quest: Slice Society — Pizza Pop-Up</div>
+            <div id="details-slice" class="quest-details hidden">
+                <p><strong>Background:</strong> Monthly pizza pop-up wants a page to announce the next date and menu.</p>
+                <p><strong>Goal:</strong> Tease the menu; let visitors vote 'Which slice sounds best?' with a simple counter.</p>
+                <p><strong>Scope:</strong> Top section, Featured Slices, Event Details.</p>
+                <p><strong>Must-have interactions:</strong></p>
+                <ul>
+                    <li>Hover page title reveals a cheeky alternate.</li>
+                    <li>'Vote for this slice' button updates a count.</li>
+                    <li>Surprise Flavor button randomizes page background color.</li>
+                </ul>
+                <p><strong>Assets:</strong> Logo (PNG), 3 slice photos, date/time/location, short copy.</p>
+                <p><strong>Constraints:</strong> Single page; no forms.</p>
+            </div>
+            <ul class="members">
+                <li class="member"><span class="fullname">Benedict Shane Austin Lim</span></li>
+                <li class="member"><span class="fullname">Michael Abiel Purnama</span></li>
+                <li class="member"><span class="fullname">Raine Jefferson Leonne Cahyadi</span></li>
+                <li class="member"><span class="fullname">Dave Samuel Gunawan</span></li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+                <h2>PixelFrame</h2>
+                <button class="details-btn" onclick="toggleDetails('pixelframe')">Details</button>
+            </div>
+            <div class="team-name">Team name: Unknown</div>
+            <div class="picked-quest">Picked quest: PixelFrame — Photography Mini-Portfolio</div>
+            <div id="details-pixelframe" class="quest-details hidden">
+                <p><strong>Background:</strong> Solo photographer wants a minimal demo page.</p>
+                <p><strong>Goal:</strong> Showcase 3 photos and gather interest.</p>
+                <p><strong>Scope:</strong> Top section, Gallery Row, Contact Links.</p>
+                <p><strong>Must-have interactions:</strong></p>
+                <ul>
+                    <li>Hover brand name swaps to a camera-emoji version.</li>
+                    <li>'Appreciate this set' button shows a live counter.</li>
+                    <li>Studio Light toggle or randomized neutral background tones.</li>
+                </ul>
+                <p><strong>Assets:</strong> Logo (SVG), 3 photos, short bio, IG link.</p>
+                <p><strong>Constraints:</strong> Single page; images optimized.</p>
+            </div>
+            <ul class="members">
+                <li class="member"><span class="fullname">Lie Josh Trevor Hermawan</span></li>
+                <li class="member"><span class="fullname">Axton Reign Sander</span></li>
+                <li class="member"><span class="fullname">Clayton Addison Gunawan</span></li>
+                <li class="member"><span class="fullname">Carissa Bianca Senjaya</span></li>
+                <li class="member"><span class="fullname">Mikhaela Cordelia Ruslim</span></li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+                <h2>Unknown</h2>
+                <button class="details-btn" onclick="toggleDetails('unkownq')">Details</button>
+            </div>
+            <div class="team-name">Team name: Unknown</div>
+            <div class="picked-quest">Picked quest: Unknown</div>
+            <div id="details-unkownq" class="quest-details hidden">
+                <!-- <p><strong>Background:</strong> We highlight one adoptable pet each week and need a warm page.</p>
+                <p><strong>Goal:</strong> Encourage visits to the shelter and adoption interest.</p>
+                <p><strong>Scope:</strong> Top section with pet photo, About Me, Visit/Contact info.</p>
+                <p><strong>Must-have interactions:</strong></p>
+                <ul>
+                    <li>Hover the pet's name reveals a fun nickname.</li>
+                    <li>'I'd visit to meet!' button increments a friendly counter.</li>
+                    <li>Playful Mode button changes background color.</li>
+                </ul>
+                <p><strong>Assets:</strong> Logo, 1-2 pet photos, short story, address/hours.</p>
+                <p><strong>Constraints:</strong> Single page; no forms.</p> -->
+            </div>
+            <ul class="members">
+                <li class="member"><span class="fullname">Bernadus Maylvin Angello</span></li>
+                <li class="member"><span class="fullname">Angeliena Wangsalijaya</span></li>
+                <li class="member"><span class="fullname">Lionel Gideon Phen</span></li>
+                <li class="member"><span class="fullname">Alexander Baker Liem</span></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+    function toggleDetails(id) {
+        var el = document.getElementById('details-' + id);
+        if (!el) return;
+        if (el.classList.contains('hidden')) el.classList.remove('hidden'); else el.classList.add('hidden');
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    </script>
+</body>
+</html>
